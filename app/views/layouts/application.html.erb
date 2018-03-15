@@ -9,23 +9,20 @@
   </head>
 
   <body>
-  	<header class="navbar navbar-default" rold="navigation">
-      <div class= "navbar-inner">
-        <div class="container">
-          <div id="logo" class="navbar-brand"><%= link_to "Reddit", root_path %></div>
-          <nav class="collapse navbar-collapse navbar-ex1-collapse">
-            <% if user_signed_in? %>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to 'Submit link'. new_link_path %></li>
-              <li><%= link_to 'Account'. edit_user_registration_path %></li>
-              <li><%= link_to 'Sign Out'. destroy_user_session_path, :method => :delete %></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">REDDIT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to 'Submit link', new_link_path %></li>
+              <li><%= link_to 'Account', edit_user_registration_path %></li>
+              <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
             </ul>
-            <% end %>
-          </nav>
-        </div>
-      </div>
-    </header>
-
+          </div>
+        </nav>
+ 
     <div id="main" class="container">
 
     <% flash.each do |name, msg| %> 
