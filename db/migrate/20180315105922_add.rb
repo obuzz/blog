@@ -1,4 +1,4 @@
-class Add < ActiveRecord::Migration[5.1]
+class Add < ActiveRecord::Migration[5.1][5.1]
   def change
   end
 end
